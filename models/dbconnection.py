@@ -18,7 +18,7 @@ class Keys(Base):
 
     @classmethod
     def getSAConn(self):
-        s = Session(bind=create_engine("sqlite:///c:\\python\\E\\uw\\stockquote\\keys.sqlite"))
+        # s = Session(bind=create_engine("sqlite:///c:\\python\\E\\uw\\stockquote\\keys.sqlite"))
         s = Session(bind=create_engine(sqlitedb))
         keys = s.query(Keys).all()
         k = {x.name: x.key for x in keys}

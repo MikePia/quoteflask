@@ -1,0 +1,10 @@
+#!/bin/bash
+export PROJECTDIR=/usr/local/quoteflask
+
+if test -z "$PYTHONPATH"
+then
+
+	export PYTHONPATH=/usr/local/quoteflask
+else
+	export PYTHONPATH=/usr/local/quoteflask:$PYTHONPATH
+fi
